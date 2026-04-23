@@ -423,58 +423,73 @@
   }
 
   /* ---------- Responsive ---------- */
-  /* Laptop / narrow desktop — shrink card stack before full stack */
+  /* Laptop / narrow desktop — shrink card stack to keep two-column layout */
   @media (max-width: 1000px){
     .visual{
-      width: 220px;
-      height: 180px;
+      width: 200px;
+      height: 160px;
     }
     .card{
-      width: 200px;
-      padding: 12px 14px;
+      width: 180px;
+      padding: 10px 12px;
     }
     .card .badge{
-      width: 40px;
-      height: 40px;
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
     }
-    .card .badge svg{ width: 19px; height: 19px; }
-    .card .info .title{ font-size: 12.5px; }
-    .card .info .sub{ font-size: 10.5px; }
-    .card-2{ top: 50px; }
-    .card-1{ top: 100px; }
+    .card .badge svg{ width: 17px; height: 17px; }
+    .card .info .title{ font-size: 12px; }
+    .card .info .sub{ font-size: 10px; }
+    .card-2{ top: 44px; right: 14px; }
+    .card-1{ top: 88px; right: 4px; }
+    .card-1 .featured-badge{ font-size: 9px; padding: 2px 6px; }
   }
 
+  /* Tighter still for very narrow iframes */
   @media (max-width: 820px){
+    .visual{
+      width: 170px;
+      height: 150px;
+    }
+    .card{
+      width: 160px;
+    }
+    .card-2{ top: 40px; }
+    .card-1{ top: 80px; }
+  }
+
+  /* Finally stack vertically only when truly tight */
+  @media (max-width: 640px){
     .banner{
       grid-template-columns: 1fr;
-      padding: 28px;
-      gap: 28px;
+      padding: 24px;
+      gap: 24px;
     }
     .visual{
       width: 100%;
-      height: 200px;
-      max-width: 280px;
+      height: 180px;
+      max-width: 260px;
       margin: 0 auto;
     }
-    /* Reset card sizes back to full when stacked vertically */
     .card{
-      width: 240px;
-      padding: 14px 16px;
+      width: 220px;
+      padding: 12px 14px;
     }
     .card .badge{
-      width: 46px;
-      height: 46px;
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
     }
-    .card .badge svg{ width: 22px; height: 22px; }
-    .card .info .title{ font-size: 13.5px; }
-    .card .info .sub{ font-size: 11.5px; }
-    .card-2{ top: 58px; }
-    .card-1{ top: 116px; }
+    .card .badge svg{ width: 20px; height: 20px; }
+    .card .info .title{ font-size: 13px; }
+    .card .info .sub{ font-size: 11px; }
+    .card-2{ top: 50px; right: 14px; }
+    .card-1{ top: 100px; right: 4px; }
   }
-  @media (max-width: 480px){
-    .banner{ padding: 24px 22px; }
+  @media (max-width: 420px){
+    .banner{ padding: 20px 18px; }
     .cta-row{ gap: 12px; }
-    .btn-primary,
     .btn-secondary{ width: 100%; justify-content: center; }
     .visual{ display:none; }
   }
