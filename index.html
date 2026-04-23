@@ -34,20 +34,19 @@
 
   *, *::before, *::after { box-sizing: border-box; }
 
+  html, body{
+    margin: 0;
+    padding: 0;
+    background: transparent;
+  }
   body{
-    margin:0;
-    min-height:100vh;
     font-family:'Plus Jakarta Sans', system-ui, sans-serif;
     color: var(--ink);
-    background:
-      radial-gradient(1000px 500px at 90% -10%, #EAF0FE 0%, transparent 60%),
-      radial-gradient(800px 400px at -10% 110%, #FFF4E8 0%, transparent 55%),
-      var(--latte);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding: 48px 24px;
-    letter-spacing:-0.01em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: -0.01em;
+    overflow: hidden;
   }
 
   /* ---------- Banner shell ---------- */
